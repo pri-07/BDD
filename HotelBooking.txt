@@ -1,0 +1,42 @@
+public static void main(String[] args) throws InterruptedException{
+		WebDriver driver=new FirefoxDriver();
+		driver.get("file:///D:/MATERIALS/hotelBooking/hotelbooking.html");
+		
+		/***********Blank First Name****************/
+		driver.findElement(By.id("txtFirstName")).sendKeys("");
+		driver.findElement(By.id("btnPayment")).click();
+		driver.switchTo().alert();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+		/************Valid First Name*****************/
+		driver.findElement(By.id("txtFirstName")).sendKeys("Pratik");
+		
+		/***********Blank Last Name****************/
+		driver.findElement(By.id("txtLastName")).sendKeys("");
+		driver.findElement(By.id("btnPayment")).click();
+		driver.switchTo().alert();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+		/************Valid First Name*****************/
+		driver.findElement(By.id("txtLastName")).sendKeys("Borse");
+		
+		/***********Blank Email****************/
+		driver.findElement(By.id("txtEmail")).sendKeys("");
+		driver.findElement(By.id("btnPayment")).click();
+		driver.switchTo().alert();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+		/************Valid Email*****************/
+		driver.findElement(By.id("txtEmail")).sendKeys("borse.pratik1@gmail.com");
+		
+		/***********Blank Phone Number****************/
+		driver.findElement(By.id("txtPhone")).sendKeys("");
+		driver.findElement(By.id("btnPayment")).click();
+		driver.switchTo().alert();
+		Thread.sleep(1000);
+		driver.switchTo().alert().accept();
+		/************Valid Phone Number*****************/
+		driver.findElement(By.id("txtPhone")).sendKeys("7057036642");
+		
+		
+	}
